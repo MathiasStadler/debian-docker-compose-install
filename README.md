@@ -28,3 +28,10 @@ docker run -u$UID:$GID -w$PWD -v$PWD:$PWD docker-compose -f simple.yml up -d
 docker run  --entrypoint /bin/ash --rm -it -u$UID:$GID -w$PWD -v$PWD:$PWD -v /var/run/docker.sock:/var/run/docker.sock docker-compose
 
 docker run   --rm -it -u0:0 -w$PWD -v$PWD:$PWD -v /var/run/docker.sock:/var/run/docker.sock docker-compose  -f simple.yml up -d
+
+curl -H "Access-Control-Request-Method: GET" -H "Origin: http://localhost" --head http://localhost
+
+https://www.simplified.guide/ssh/run-multiple-ports
+
+sudo ssh -L 5000:localhost:5000 192.168.178,210
+sudo ssh -L 80:localhost:80 192.168.178,210
