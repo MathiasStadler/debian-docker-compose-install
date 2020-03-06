@@ -35,3 +35,9 @@ https://www.simplified.guide/ssh/run-multiple-ports
 
 sudo ssh -L 5000:localhost:5000 192.168.178,210
 sudo ssh -L 80:localhost:80 192.168.178,210
+
+docker tag debian:buster localhost:5000/debian:buster
+docker push localhost:5000/debian
+
+https://mesosphere.github.io/marathon/docs/native-docker-private-registry.html
+
