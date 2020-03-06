@@ -41,3 +41,4 @@ docker push localhost:5000/debian
 
 https://mesosphere.github.io/marathon/docs/native-docker-private-registry.html
 
+ docker login http://localhost:5000
